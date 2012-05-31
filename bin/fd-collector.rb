@@ -69,7 +69,7 @@ loop do
 	# Or for each child process ps.fds iterates over the number of open
 	# fds by child process of sv.pid
 	# ps.fds(sv.pid) do |fds|	
-		st.send(mytimer, fds)
+	#	st.send(mytimer, fds)
 	# end
 
 	# Delay for interval
