@@ -1,5 +1,3 @@
-#!/usr/bin/ruby
-
 # The standard Process library doesn't contain a method for getting
 # ppids for a given process and Sys-Utils is old, so rolling a class to 
 # do it.
