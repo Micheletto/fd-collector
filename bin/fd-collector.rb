@@ -55,7 +55,7 @@ st = Statsd.new()
 # Main
 loop do
     # sv.pid returns the process id for a daemontools managed application
-    # by querying it's status file.
+    # by querying its status file.
 
     # Send the timer: ps.fds iterates over the number of open fds by child 
     # process of sv.pid
