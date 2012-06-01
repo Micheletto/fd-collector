@@ -4,9 +4,9 @@
 
 # Libraries
 require 'optparse'
-require 'svstat.rb'
-require 'ppid.rb'
-require 'statsdsend.rb'
+require 'FDcollect::Svstat'
+require 'FDcollect::PPid'
+require 'FDcollect::StatsdSend'
 
 # Defaults
 options = {}
