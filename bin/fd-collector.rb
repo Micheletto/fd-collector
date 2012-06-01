@@ -57,10 +57,6 @@ loop do
     # sv.pid returns the process id for a daemontools managed application
     # by querying it's status file.
 
-    # ps.total returns the total amount of fds opened by all children 
-    # processes of sv.pid
-    fds = ps.total(sv.pid)
-
     # Send the timer: ps.fds iterates over the number of open fds by child 
     # process of sv.pid
     ps.fds(sv.pid) do |fds|
