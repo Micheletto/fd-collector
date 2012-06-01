@@ -11,7 +11,9 @@ class Ppid
         pidre = /[0-9]+/
 
         # Assuming this is being run on a modern linux variant that
-        # has -ppid flag.
+        # has -ppid flag.  Procfs does not appear to list children processes,
+        # but parent process is available as the PPid flag in 'status'.  
+        # This should be converted to do that rather than shelling out to ps.
         ppids = %x(/bin/ps --ppid #{pid} -o pid)
 
         # Will change this to raise an exception in the future and
