@@ -6,7 +6,7 @@ class Svstat
         @statfile = dir + "/supervise/status"
     end
 
-    # Provid PID information.
+    # Provide PID information.
     def pid
         # Open status file for binary reading.
         f = File.open(@statfile, "rb:binary")
