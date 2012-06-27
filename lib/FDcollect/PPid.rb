@@ -57,7 +57,7 @@ class Ppid
 
         mydir = Dir.new("/proc/#{p}/fd")
         myfiles = mydir.entries
-        mydir.close # Close this to avoid opening too many FDs ourself.
+        mydir.close # Close this to avoid opening too many FDs ourselves.
 
         # Instead of using a pattern to ignore dot files, or
         # match files comprising only of numbers, just subtract
