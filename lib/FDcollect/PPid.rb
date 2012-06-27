@@ -5,9 +5,6 @@ class Ppid
   # Using Enumerable to add grep method to file class.
   include Enumerable
 
-  # Named regex to make sure we have a number.
-  pidre = /[0-9]+/
-
   # iterate over procfs, and return currently running processes
   def ps
 
