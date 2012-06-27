@@ -41,7 +41,7 @@ class Ppid
 
         # Open status file, and look for our parent process.
         myfile = File.new("/proc/#{p}/status", 'r')
-        unless(myfile.grep(ppidre).empty?):
+        unless(myfile.grep(ppidre).empty?)
             yield p
         end
         myfile.close
