@@ -3,7 +3,7 @@
 class Svstat
   # Identify status file.
   def initialize(dir)
-    @statfile = dir + "/supervise/status"
+    @statfile = File.join(dir, "supervise", "status")
   end
 
   # Provide PID information.
