@@ -11,10 +11,7 @@ class Ppid
     # Named regex to make sure we have a number.
     pidre = /[0-9]+/
 
-    pdir = Dir.new("/proc")
-    myprocs = pdir.entries
-    pdir.close
-
+    myprocs = Dir.entries("/proc")
     myprocs.grep(pidre).each do |p|
       yield p
     end
@@ -55,9 +52,7 @@ class Ppid
       begin # Using begin and rescue block to handle disappearing
         # processes, as in the each method.
 
-        mydir = Dir.new("/proc/#{p}/fd")
-        myfiles = mydir.entries
-        mydir.close # Close this to avoid opening too many FDs ourselves.
+        myfiles = Dir.entries("/proc/#{p}/fd")
 
         # Instead of using a pattern to ignore dot files, or
         # match files comprising only of numbers, just subtract
