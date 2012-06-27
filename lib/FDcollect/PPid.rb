@@ -7,7 +7,6 @@ class Ppid
 
   # iterate over procfs, and return currently running processes
   def ps
-
     # Named regex to make sure we have a number.
     pidre = /[0-9]+/
 
@@ -20,6 +19,7 @@ class Ppid
 
   # iterate over children PIDs
   def each(pid)
+    return to_enum(:each, pid) unless block_given?
     # Include parent pid
     yield pid
 
@@ -47,6 +47,8 @@ class Ppid
 
   # Iterate over number of FDs opened by children processes.
   def fds(pid)
+    return to_enum(:fds, pid) unless block_given?
+
     self.each(pid) do |p|
 
       begin # Using begin and rescue block to handle disappearing
@@ -70,12 +72,6 @@ class Ppid
 
   # Return the total of all FDs opened by children processes of pid.
   def total(pid)
-    tot = 0
-    self.fds(pid) do |n|
-      tot += n
-    end
-
-    # Return this value.
-    tot
+    self.fds(pid).inject(:+)
   end
 end
