@@ -1,7 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'fdcollector'
-  s.version       = '1.0'
-  s.date          = '2012-06-26'
+  s.version       = '1.0.0'
   s.summary       = 'FD Collector'
   s.description   = 'A statsd collector for open FDs for daemontools managed apps.'
   s.authors       = ['Bob Micheletto']
