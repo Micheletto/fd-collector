@@ -1,12 +1,12 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 # Script to enumerate open file descriptors by daemontools managed daemons
 # and report them to statsd
 
 # Libraries
 require 'optparse'
-require 'FDcollect::Svstat'
-require 'FDcollect::PPid'
-require 'FDcollect::StatsdSend'
+require 'FDcollect/Svstat'
+require 'FDcollect/PPid'
+require 'FDcollect/StatdSend'
 
 # Defaults
 options = {}
