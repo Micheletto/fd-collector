@@ -14,7 +14,7 @@ class Statsd
   # Deliver timer to statsd
   def send (timer, data)
     # Send the message to statsd.
-    @usocket.send(timer + ":" + data.to_s + "|ms", 0)
+    @usocket.send("#{timer}:#{data}|ms", 0)
   end
 
 end
