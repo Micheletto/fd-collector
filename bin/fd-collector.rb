@@ -13,14 +13,14 @@ options = {}
 
 # Parse command line options.
 optparse = OptionParser.new do |opts|
-  opts.banner = "Usage: [ -i SECONDS -a APPLICATION ] DIRECTORY"
+  opts.banner = "Usage: [ -i SECONDS ] [ -a APPLICATION ] SERVICE_DIRECTORY"
 
   options[:interval] = 20
-  opts.on( '-i', '--interval SECONDS', "Seconds between checks.") do |sec|
+  opts.on( '-i', '--interval SECONDS', "Seconds between checks. Defaults to " + options[:interval] + " seconds.") do |sec|
     options[:interval] = sec
   end
 
-  opts.on( '-a', '--application APPLICATION', "Name of the application.") do |a|
+  opts.on( '-a', '--application APPLICATION', "Name of the application. Defaults to basename of SERVICE_DIRECTORY.") do |a|
     options[:application] = a
   end
 
