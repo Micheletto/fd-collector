@@ -4,9 +4,9 @@
 
 # Libraries
 require 'optparse'
-require 'FDcollect/Svstat'
-require 'FDcollect/PPid'
-require 'FDcollect/StatdSend'
+require 'fdcollect/svstat'
+require 'fdcollect/ppid'
+require 'fdcollect/statdsend'
 
 # Defaults
 options = {}
