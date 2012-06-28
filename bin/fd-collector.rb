@@ -49,7 +49,7 @@ unless options[:application]
 end
 
 # Build timer
-mytimer = options[:application] + "open_fd"
+mytimer = options[:application] + ".open_fd"
 
 # Build objects
 sv = Svstat.new(dir)
