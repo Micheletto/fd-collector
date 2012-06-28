@@ -1,2 +1,1 @@
-Initial attempt at creating a script to report open file descriptors for
-applications managed by daemontools to statsd.
+Script to report open file descriptors for applications managed by daemontools to statsd.
