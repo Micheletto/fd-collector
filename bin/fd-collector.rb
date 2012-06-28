@@ -20,7 +20,7 @@ optparse = OptionParser.new do |opts|
   opts.banner = "Usage: [ -i SECONDS ] [ -a APPLICATION ] SERVICE_DIRECTORY"
 
   options[:interval] = 20
-  opts.on( '-i', '--interval SECONDS', "Seconds between checks. Defaults to " + options[:interval] + " seconds.") do |sec|
+  opts.on( '-i', '--interval SECONDS', "Seconds between checks. Defaults to " + options[:interval].to_s + " seconds.") do |sec|
     options[:interval] = sec
   end
 
